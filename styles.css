@@ -3,7 +3,7 @@
     max-width: 600px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
     margin: 20px 0;
     display: block;
     margin-left: auto;
@@ -186,7 +186,11 @@ footer {
 
 .text-box {
     background: #ffffff;
-    padding: 5%;
+    padding: 1%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}
+.down-arrow{
+    width: 5%;
+    height: auto; 
 }
