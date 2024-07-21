@@ -1,7 +1,32 @@
-function learnMore() {
-    window.location.href = "#about";
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-function learnMore() {
-    window.location.href = 'learn-more.html';
-}
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+    // Expose the plusSlides and currentSlide functions to the global scope
+    window.plusSlides = plusSlides;
+    window.currentSlide = currentSlide;
+});
