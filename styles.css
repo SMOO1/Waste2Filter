@@ -7,7 +7,7 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #376648;
+    background-color: #3a6b52;
     color: #333;
 }
 
@@ -65,9 +65,9 @@ nav ul li a:hover {
 section {
     padding: 40px;
     margin: 20px;
-    background: #f3e2a4;
+    background: #5d7e58;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 section#home {
@@ -90,21 +90,38 @@ section#home p {
 section#home button {
     padding: 10px 30px;
     background: #f3e2a4;
-    color: #ffffff;
+    color: rgb(0, 0, 0);
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    
 }
 
+
 section#home button:hover {
-    background: #f3e2a4d4;
+    background: #f9d965eb;
+    transition: 1s;
+}
+
+section#about {
+    background: none; /* Remove background for the about section */
+    box-shadow: none; /* Remove shadow for the about section */
+    padding: 40px 0; /* Adjust padding */
+    margin: 0; /* Remove margin */
 }
 
 section#about h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
     color: #1e4735;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0; /* Add padding to the top and bottom */
 }
 
 footer {
@@ -152,7 +169,6 @@ footer {
     background-color: #376648;
 }
 
-/* Caption text */
 /* Caption text */
 .text {
     color: #f2f2f2;
@@ -274,7 +290,7 @@ footer {
 
 .videos {
     display: flex;
-    justify-content: column; 
+    justify-content: row; 
 }
 
 .carbon-images {
