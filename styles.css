@@ -1,22 +1,3 @@
-.stylish-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.stylish-image:hover {
-    transform: scale(1.05);
-}
-
-/* Other existing styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +17,7 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* Add relative positioning */
+    position: relative;
 }
 
 .logo-container {
@@ -44,8 +25,15 @@ header {
 }
 
 .logo {
-    width: 20%; /* Adjust size as needed */
+    width: 20%;
     height: auto;
+}
+
+.stylish-image {
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3); 
+    width: 100%;
+    
+    position: relative; 
 }
 
 header h1 {
@@ -129,6 +117,126 @@ footer {
     width: 100%;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 60%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+} 
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: auto;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: #f3e2a4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #376648;
+}
+
+/* Caption text */
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0; /* Aligns the text at the top */
+    left: 0; /* Aligns the text to the left */
+    width: 33.33%; /* Covers a third of the image width */
+    height: 100%; /* Covers the full height of the image */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center; /* Centers the text vertically */
+    justify-content: center; /* Centers the text horizontally */
+}
+.center-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+}
+
+/* Container for navigation buttons and dots */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Adjust the position of the dots container */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.slide-content{
+    display: flex;
+    flex-direction: row; 
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
@@ -163,34 +271,20 @@ footer {
     margin-right: 2%;
     justify-content: row;
 }
-.videos{
+
+.videos {
     display: flex;
     justify-content: column; 
 }
 
 .carbon-images {
     display: flex;
-    justify-content: center; /* Adjust alignment */
-    gap: 50%; /* Space between images */ 
+    justify-content: center;
+    gap: 50%;
     align-items: center;
     flex-direction: column;
 }
-
-.image-text-pair {
-    display: flex;
+.button-slideshow-container{
+    display: flex; 
     flex-direction: row; 
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px; 
-}
-
-.text-box {
-    background: #ffffff;
-    padding: 1%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
-}
-.down-arrow{
-    width: 5%;
-    height: auto; 
 }
